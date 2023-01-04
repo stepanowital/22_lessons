@@ -1,7 +1,6 @@
 # Измените класс Person так, чтобы его методы 
 # оперировали внутренним состоянием, 
 # а не использовали цепочку вызовов объектов
-
 class Room:
     def get_name(self):
         return 42
@@ -31,15 +30,18 @@ class Planet:
 
 
 class Person:
-    def __init__(self):
-        self.planet = Planet()
+    def __init__(self, city_population, room_num):
+        self.city_population = city_population
+        self.room_num = room_num
 
     def get_person_room(self):
-        return self.planet.get_contry().get_city().get_street().get_room().get_name()
+        return self.room_num
 
     def get_city_population(self):
-        return self.planet.get_contry().get_city().population()
+        return self.city_population
 
 
-# TODO после выполнения задания попробуйте
-# сделать экземпляр класса person и вызвать новые методы.
+person = Person(5000, 69)
+
+print(person.get_city_population())
+print(person.get_person_room())

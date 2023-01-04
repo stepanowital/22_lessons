@@ -20,14 +20,6 @@ class Unit:
 class Field:
     def set_unit(self, x, y, unit: Unit):
         pass
-#
-#
-# class FieldAdapter:
-#     def __init__(self, field: Field):
-#         self.field = field
-#
-#     def set_unit(self, x, y, unit: Unit):
-#         self.field.set_unit(x, y, unit)
 
 
 class Main:
