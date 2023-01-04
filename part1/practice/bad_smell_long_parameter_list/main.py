@@ -11,7 +11,7 @@
 
 
 class Unit:
-    def move(self, field, x_coord, y_coord, direction, is_fly, crawl, speed = 1):
+    def move(self, field, x_coord, y_coord, direction, is_fly, crawl, speed=1):
 
         if is_fly and crawl:
             raise ValueError('Рожденный ползать летать не должен!')
